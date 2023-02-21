@@ -1,7 +1,8 @@
 <?php
     session_start();
-    if (!isset($_SESSION['midspringadmin']) || $_SESSION['midspringadmin'] != 'abc123') {
-        header('location: ../../index.php');
+
+    if(!isset($_SESSION['midAdmin']) || $_SESSION['midAdmin'] != 'abc123') {
+        header('location:../../');
         exit();
     }
 ?>

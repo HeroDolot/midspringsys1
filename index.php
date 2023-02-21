@@ -1,8 +1,9 @@
 <?php
     include 'connection.php';
     session_start();
-    if (isset($_SESSION['midspringadmin']) && $_SESSION['midspringadmin'] == 'abc123') {
+    if (isset($_SESSION['midAdmin']) && $_SESSION['midAdmin'] == 'abc123') {
         header('location: pages/dashboard.php');
+        exit();
     }
 ?>
 <!doctype html>
@@ -40,7 +41,6 @@
 <main class="form-signin">
     <form action="controller/authentication/authentication.php" method="post">
         <img class="mx-auto" src="./images/logofinalpng.png" alt="" width="300px" height="300px">
-        <h1 class="h2 mb-3 fw-normal">Welcome</h1>
 
         <div class="form-floating mb-3">
             <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User ID">
